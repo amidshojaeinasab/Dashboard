@@ -11,13 +11,13 @@
     <main class="container-fluid">
         <div class="row">
             <aside class="col-lg-2 d-none d-lg-block p-0">
-                <div class="shadow h-100 d-lg-block">
+                <div class="shadow h-100 d-flex flex-column position-fixed w_inherit p-3">
                     <a href= "#" class="d-flex gap-2 align-content-center text-decoration-none link-body-emphasis">
                         <img src="/img/logo.png" alt="" width="150px">
                         <span class="fs-4 fw-bold">شجاعی نسب</span>
                     </a>
                     <hr>
-                    <ul class="nav nav-pills d-block">
+                    <ul class="nav nav-pills d-block mb-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link d-flex gap-2 active">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -73,7 +73,20 @@
 
                     </ul>
                     <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, amet.</p>
+                    <div class="dropdown">
+                        <a href="#" data-bs-toggle="dropdown" class="dropdown-toggle d-flex align-items-center gap-2 text-decoration-none link-body-emphasis">
+                            <img src="img/user.jpg" class="rounded-circle" width="32" height="32" alt="">
+                            <strong>محمد قاسمی</strong>
+                        </a>
+                        <ul class="dropdown-menu shadow" data-popper-placement="top-end">
+                            <li>
+                                <a href="#" class="dropdown-item">پروژه جدید ...</a>
+                                <a href="#" class="dropdown-item">تنظیمات</a>
+                                <a href="#" class="dropdown-item">پروفایل</a>
+                                <a href="#" class="dropdown-item">خروج</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </aside>
             <section class="col-lg-10 bg-danger p-0">main</section>
