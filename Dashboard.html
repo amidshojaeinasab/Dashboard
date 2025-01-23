@@ -461,9 +461,53 @@
                 </div>
             </section>
         </div>
-
+        <div class="dropdown position-fixed bottom-0 end-0 me-3 mb-3">
+            <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">تغییر تم</button>
+            <ul class="dropdown-menu">
+                <li>
+                    <button class="dropdown-item active" id="lightModeBtn">روشن</button>
+                </li>
+                <li>
+                    <button class="dropdown-item " id="darkModeBtn">تاریک</button>
+                </li>
+            </ul>
+        </div>
     </main>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        let lightModeBtn = document.getElementById('lightModeBtn')
+        let darkModeBtn = document.getElementById('darkModeBtn')
+
+
+        darkModeBtn.addEventListener('click', function () {
+            console.log('click darkModeBtn')
+            document.documentElement.setAttribute('data-bs-theme', 'dark')
+            darkModeBtn.classList.add('active')
+            lightModeBtn.classList.remove('active')
+            localStorage.setItem('themeMode', 'dark')
+        })
+        lightModeBtn.addEventListener('click', function () {
+            console.log('click lightModeBtn')
+            document.documentElement.setAttribute('data-bs-theme', 'light')
+            lightModeBtn.classList.add('active')
+            darkModeBtn.classList.remove('active')
+            localStorage.setItem('themeMode', 'light')
+        })
+
+        let saveThemMode = localStorage.getItem('themeMode')
+        if (saveThemMode == 'dark') {
+            document.documentElement.setAttribute('data-bs-theme', 'dark')
+            darkModeBtn.classList.add('active')
+            lightModeBtn.classList.remove('active')
+          
+        }
+        else{
+            document.documentElement.setAttribute('data-bs-theme', 'light')
+            lightModeBtn.classList.add('active')
+            darkModeBtn.classList.remove('active')
+          
+        }
+    </script>
 </body>
 </html>
